@@ -22,6 +22,13 @@ public abstract class AbstractTime {
         this.sec = sec;
         this.msec = msec;
     }
+    protected String getTwoDigits(int number) {
+        return String.format("%02d", number);
+    }
+
+    protected String getThreeDigits(int number) {
+        return String.format("%03d", number);
+    }
 
     /**
      * Получить часы
