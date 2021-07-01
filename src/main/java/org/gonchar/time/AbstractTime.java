@@ -7,6 +7,9 @@ public abstract class AbstractTime {
     protected int sec;
     protected int msec;
 
+    public AbstractTime() {
+    }
+
     /**
      * Конструктор по величинам
      */

@@ -8,8 +8,16 @@ public class Time12 extends AbstractTime {
         super(hour, min, sec, msec);
     }
 
+
     public Time12(String str) {
-        super(12, 34, 35,567); // TODO реализовать
+        hour = Integer.parseInt(str.substring(0, 2));
+        min = Integer.parseInt(str.substring(3, 5));
+        sec = Integer.parseInt(str.substring(6, 8));
+        msec = Integer.parseInt(str.substring(9, 12));
+        String dh = str.substring(13);
+        if (dh.equalsIgnoreCase("pm")) {
+            hour = hour + 12;
+        }
     }
 
     /**
