@@ -2,12 +2,15 @@ package org.gonchar.time;
 
 public class Time12 extends AbstractTime {
     /**
-     * Конструктор по величинам
+     * Конструктор по величинам 24-часового времени
      */
     public Time12(int hour, int min, int sec, int msec) {
         super(hour, min, sec, msec);
     }
 
+    /**
+     * Конструктор по строке
+     */
     public Time12(String str) {
         hour = Integer.parseInt(str.substring(0, 2));
         min = Integer.parseInt(str.substring(3, 5));

@@ -1,11 +1,10 @@
 package org.gonchar.time;
 
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Ignore;
 import org.junit.Test;
 
-public class TimeTest {
+import static org.junit.Assert.assertEquals;
+
+public class Time24Test {
 
     @Test
     public void testGetters() {
@@ -24,24 +23,6 @@ public class TimeTest {
         String time24string = time.getTime();
 
         assertEquals("03:05:07.004", time24string);
-    }
-
-    @Test
-    public void test12stringPM() {
-        Time12 time = new Time12("11:02:03.052 pm");
-
-        String time12string = time.getTime();
-
-        assertEquals("11:02:03.052 pm", time12string);
-    }
-
-    @Test
-    public void test12stringAM() {
-        Time12 time = new Time12("11:02:03.052 am");
-
-        String time12string = time.getTime();
-
-        assertEquals("11:02:03.052 am", time12string);
     }
 
     @Test(expected = IllegalArgumentException.class)
