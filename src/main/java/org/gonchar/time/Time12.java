@@ -8,6 +8,16 @@ public class Time12 extends AbstractTime {
         super(hour, min, sec, msec);
     }
 
+    @Override
+    public String getTime() {
+        int h = hour;
+        String dh = "am";
+        if (hour > 12) {
+            h = hour % 12;
+            dh = "pm";
+        }
+        return getTwoDigits(h) + ":" + getTwoDigits(min) + ":" + getTwoDigits(sec) + "." + getThreeDigits(msec) + ' ' + dh;
+    }
 
     public Time12(String str) {
         hour = Integer.parseInt(str.substring(0, 2));
@@ -20,16 +30,4 @@ public class Time12 extends AbstractTime {
         }
     }
 
-    /**
-     * Получить строку в 12-часовом формате
-     */
-    public String get12string() {
-        int h = hour;
-        String dh = "am";
-        if (hour > 12) {
-            h = hour % 12;
-            dh = "pm";
-        }
-        return getTwoDigits(h) + ":" + getTwoDigits(min) + ":" + getTwoDigits(sec) + "." + getThreeDigits(msec) + ' ' + dh;
-    }
 }

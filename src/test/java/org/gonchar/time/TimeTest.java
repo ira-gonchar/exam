@@ -21,7 +21,7 @@ public class TimeTest {
     public void test24string() {
         Time24 time = new Time24(3, 5, 7, 4);
 
-        String time24string = time.get24string();
+        String time24string = time.getTime();
 
         assertEquals("03:05:07.004", time24string);
     }
@@ -30,7 +30,7 @@ public class TimeTest {
     public void test12stringPM() {
         Time12 time = new Time12("11:02:03.052 pm");
 
-        String time12string = time.get12string();
+        String time12string = time.getTime();
 
         assertEquals("11:02:03.052 pm", time12string);
     }
@@ -39,7 +39,7 @@ public class TimeTest {
     public void test12stringAM() {
         Time12 time = new Time12("11:02:03.052 am");
 
-        String time12string = time.get12string();
+        String time12string = time.getTime();
 
         assertEquals("11:02:03.052 am", time12string);
     }

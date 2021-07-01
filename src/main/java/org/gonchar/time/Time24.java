@@ -8,22 +8,20 @@ public class Time24 extends AbstractTime {
         super(hour, min, sec, msec);
     }
 
+    @Override
+    public String getTime() {
+        return getTwoDigits(hour) + ":" + getTwoDigits(min) + ":" + getTwoDigits(sec) + "." + getThreeDigits(msec);
+    }
+
     /**
      * Конструктор по строке
      */
     public Time24(String str) {
-        this(
+        super(
                 Integer.parseInt(str.substring(0, 2)),
                 Integer.parseInt(str.substring(3, 5)),
                 Integer.parseInt(str.substring(6, 8)),
                 Integer.parseInt(str.substring(9))
         );
-    }
-
-    /**
-     * Получить строку в 24-часовом формате
-     */
-    public String get24string() {
-        return getTwoDigits(hour) + ":" + getTwoDigits(min) + ":" + getTwoDigits(sec) + "." + getThreeDigits(msec);
     }
 }

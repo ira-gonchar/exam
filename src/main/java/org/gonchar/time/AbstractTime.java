@@ -33,6 +33,7 @@ public abstract class AbstractTime {
         return String.format("%03d", number);
     }
 
+    public abstract String getTime();
     /**
      * Получить часы
      */
