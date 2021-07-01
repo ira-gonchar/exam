@@ -7,7 +7,7 @@ public abstract class AbstractTime {
     protected int sec;
     protected int msec;
 
-    public AbstractTime() {
+    protected AbstractTime() {
     }
 
     /**
@@ -25,6 +25,7 @@ public abstract class AbstractTime {
         this.sec = sec;
         this.msec = msec;
     }
+
     protected String getTwoDigits(int number) {
         return String.format("%02d", number);
     }
@@ -34,6 +35,7 @@ public abstract class AbstractTime {
     }
 
     public abstract String getTime();
+
     /**
      * Получить часы
      */

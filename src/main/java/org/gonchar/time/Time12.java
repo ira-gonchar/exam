@@ -8,17 +8,6 @@ public class Time12 extends AbstractTime {
         super(hour, min, sec, msec);
     }
 
-    @Override
-    public String getTime() {
-        int h = hour;
-        String dh = "am";
-        if (hour > 12) {
-            h = hour % 12;
-            dh = "pm";
-        }
-        return getTwoDigits(h) + ":" + getTwoDigits(min) + ":" + getTwoDigits(sec) + "." + getThreeDigits(msec) + ' ' + dh;
-    }
-
     public Time12(String str) {
         hour = Integer.parseInt(str.substring(0, 2));
         min = Integer.parseInt(str.substring(3, 5));
@@ -28,6 +17,17 @@ public class Time12 extends AbstractTime {
         if (dh.equalsIgnoreCase("pm")) {
             hour = hour + 12;
         }
+    }
+
+    @Override
+    public String getTime() {
+        int h = hour;
+        String dh = "am";
+        if (hour > 12) {
+            h = hour % 12;
+            dh = "pm";
+        }
+        return getTwoDigits(h) + ":" + getTwoDigits(min) + ":" + getTwoDigits(sec) + "." + getThreeDigits(msec) + ' ' + dh;
     }
 
 }
