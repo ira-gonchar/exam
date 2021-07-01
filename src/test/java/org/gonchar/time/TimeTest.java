@@ -8,7 +8,7 @@ public class TimeTest {
 
 	@Test
 	public void testGetters() {
-		Time time = new Time("23:13:45.727");
+		Time24 time = new Time24("23:13:45.727");
 
 		assertEquals(23, time.getHour());
 		assertEquals(13, time.getMin());
@@ -18,7 +18,7 @@ public class TimeTest {
 
 	@Test
 	public void test24string() {
-		Time time = new Time(3, 5, 7, 4);
+		Time24 time = new Time24(3, 5, 7, 4);
 
 		String time24string = time.get24string();
 
@@ -36,6 +36,6 @@ public class TimeTest {
 
 	@Test(expected = IllegalArgumentException.class)
 	public void testFailedFormat() {
-		new Time("26:02:03.052");
+		new Time24("26:02:03.052");
 	}
 }
