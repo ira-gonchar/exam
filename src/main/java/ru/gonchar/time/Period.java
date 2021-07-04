@@ -1,4 +1,4 @@
-package org.gonchar.time;
+package ru.gonchar.time;
 
 /**
  * Класс периода

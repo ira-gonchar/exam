@@ -1,4 +1,4 @@
-package org.gonchar.time;
+package ru.gonchar.time;
 
 public class Time12 extends AbstractTime {
     /**
