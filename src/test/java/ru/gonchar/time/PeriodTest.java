@@ -52,4 +52,11 @@ public class PeriodTest {
 
         assertEquals("20:50:40.600", period24string);
     }
+    @Test(expected = IllegalArgumentException.class)
+    public void testIncorrectPeriod() {
+        Time12 start = new Time12("11:54:45.606 pm");
+        Time24 end = new Time24("03:04:05.006");
+        new Period(start, end);
+    }
+
 }

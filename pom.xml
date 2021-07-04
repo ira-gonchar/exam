@@ -38,6 +38,14 @@
                     <target>${jdk.version}</target>
                 </configuration>
             </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>exec-maven-plugin</artifactId>
+                    <version>3.0.0</version>
+                    <configuration>
+                        <mainClass>ru.gonchar.time.PeriodCalculator</mainClass>
+                    </configuration>
+                </plugin>
         </plugins>
         <finalName>time</finalName>
     </build>

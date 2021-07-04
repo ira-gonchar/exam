@@ -3,6 +3,6 @@
 
 # Запуск
 ```shell
-mvn clean package embedded-glassfish:run
+mvn compile exec:java
 ```
-Затем перейти по ссылке: [http://localhost:8080/time/](http://localhost:8080/time/)
+TODO Add mavenw

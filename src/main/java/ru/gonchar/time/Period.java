@@ -27,6 +27,9 @@ public class Period extends Time24 {
         int t2ms = end.msec + end.sec * 1000 + end.min * 60 * 1000 + end.hour * 60 * 60 * 1000;
 
         int d = t2ms - t1ms; // сначала вычисляем количество миллисекунд разницы в общем
+        if (d < 0) {
+            throw new IllegalArgumentException("Период не может быть отрицательным");
+        }
         hour = d / (1000 * 60 * 60); // потом часов, минут, секунд и миллисекунд
         d = d % (1000 * 60 * 60);
         min = d / (1000 * 60);
