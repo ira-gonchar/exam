@@ -9,4 +9,3 @@ Maven 3.8.1
 ```shell
 mvnw compile exec:java
 ```
-TODO Add mavenw
